@@ -1,7 +1,7 @@
 import { Toaster } from "./toaster.jsx"
 import { QueryClientProvider } from "@tanstack/react-query"
 import { queryClientInstance } from "./query-client.js"
-import { pagesConfig } from "./pages.config"
+import { pagesConfig } from "./pages.config.js"
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
 import PageNotFound from "./PageNotFound.jsx"
 import { AuthProvider, useAuth } from "./AuthContext.jsx"
@@ -9,7 +9,7 @@ import UserNotRegisteredError from "./UserNotRegisteredError.jsx"
 
 const { Pages, Layout, mainPage } = pagesConfig
 const mainPageKey = mainPage ?? Object.keys(Pages)[0]
-const MainPage = mainPageKey ? Pages[mainPageKey] : <></>
+const MainPage = mainPageKey ? Pages[mainPageKey] : () => null
 
 const LayoutWrapper = ({ children, currentPageName }) =>
   Layout ? (
@@ -33,7 +33,8 @@ const AuthenticatedApp = () => {
   if (authError) {
     if (authError.type === "user_not_registered") {
       return <UserNotRegisteredError />
-    } else if (authError.type === "auth_required") {
+    }
+    if (authError.type === "auth_required") {
       navigateToLogin()
       return null
     }
@@ -49,7 +50,6 @@ const AuthenticatedApp = () => {
           </LayoutWrapper>
         }
       />
-
       {Object.entries(Pages).map(([path, Page]) => (
         <Route
           key={path}
@@ -61,7 +61,6 @@ const AuthenticatedApp = () => {
           }
         />
       ))}
-
       <Route path="*" element={<PageNotFound />} />
     </Routes>
   )
