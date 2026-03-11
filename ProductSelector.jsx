@@ -1,5 +1,5 @@
-import React from "react";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import React from "react"
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./select.jsx"
 
 export default function ProductSelector({ products, selectedProduct, onSelect }) {
   return (
@@ -7,6 +7,7 @@ export default function ProductSelector({ products, selectedProduct, onSelect })
       <SelectTrigger className="w-64">
         <SelectValue placeholder="Select a product" />
       </SelectTrigger>
+
       <SelectContent>
         {products.map((p) => (
           <SelectItem key={p.name} value={p.name}>
@@ -15,5 +16,5 @@ export default function ProductSelector({ products, selectedProduct, onSelect })
         ))}
       </SelectContent>
     </Select>
-  );
+  )
 }
