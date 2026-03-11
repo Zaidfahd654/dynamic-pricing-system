@@ -3,21 +3,17 @@
   "type": "object",
   "properties": {
     "product_name": {
-      "type": "string",
-      "description": "Name of the product"
+      "type": "string"
     },
     "date": {
       "type": "string",
-      "format": "date",
-      "description": "Sale date"
+      "format": "date"
     },
     "price": {
-      "type": "number",
-      "description": "Price at time of sale in INR"
+      "type": "number"
     },
     "units_sold": {
-      "type": "number",
-      "description": "Number of units sold"
+      "type": "number"
     }
   },
   "required": [
