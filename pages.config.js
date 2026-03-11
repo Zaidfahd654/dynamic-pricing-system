@@ -7,16 +7,16 @@ import UploadSalesData from "./UploadSalesData.jsx"
 import __Layout from "./Layout.jsx"
 
 export const PAGES = {
-  Home: Home,
-  PriceHistory: PriceHistory,
-  DemandForecast: DemandForecast,
-  DynamicPricing: DynamicPricing,
-  DataAnalysis: DataAnalysis,
-  UploadSalesData: UploadSalesData,
+  Home,
+  PriceHistory,
+  DemandForecast,
+  DynamicPricing,
+  DataAnalysis,
+  UploadSalesData
 }
 
 export const pagesConfig = {
   mainPage: "Home",
   Pages: PAGES,
-  Layout: __Layout,
+  Layout: __Layout
 }
