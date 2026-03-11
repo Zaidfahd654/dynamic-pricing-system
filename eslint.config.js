@@ -1,15 +1,15 @@
-import globals from "globals";
-import pluginJs from "@eslint/js";
-import pluginReact from "eslint-plugin-react";
-import pluginReactHooks from "eslint-plugin-react-hooks";
-import pluginUnusedImports from "eslint-plugin-unused-imports";
+import globals from "globals"
+import pluginJs from "@eslint/js"
+import pluginReact from "eslint-plugin-react"
+import pluginReactHooks from "eslint-plugin-react-hooks"
+import pluginUnusedImports from "eslint-plugin-unused-imports"
 
 export default [
   {
     files: [
       "src/components/**/*.{js,mjs,cjs,jsx}",
       "src/pages/**/*.{js,mjs,cjs,jsx}",
-      "src/Layout.jsx",
+      "src/Layout.jsx"
     ],
     ignores: ["src/lib/**/*", "src/components/ui/**/*"],
     ...pluginJs.configs.recommended,
@@ -19,20 +19,16 @@ export default [
       parserOptions: {
         ecmaVersion: 2022,
         sourceType: "module",
-        ecmaFeatures: {
-          jsx: true,
-        },
-      },
+        ecmaFeatures: { jsx: true }
+      }
     },
     settings: {
-      react: {
-        version: "detect",
-      },
+      react: { version: "detect" }
     },
     plugins: {
       react: pluginReact,
       "react-hooks": pluginReactHooks,
-      "unused-imports": pluginUnusedImports,
+      "unused-imports": pluginUnusedImports
     },
     rules: {
       "no-unused-vars": "off",
@@ -45,16 +41,16 @@ export default [
           vars: "all",
           varsIgnorePattern: "^_",
           args: "after-used",
-          argsIgnorePattern: "^_",
-        },
+          argsIgnorePattern: "^_"
+        }
       ],
       "react/prop-types": "off",
       "react/react-in-jsx-scope": "off",
       "react/no-unknown-property": [
         "error",
-        { ignore: ["cmdk-input-wrapper", "toast-close"] },
+        { ignore: ["cmdk-input-wrapper", "toast-close"] }
       ],
-      "react-hooks/rules-of-hooks": "error",
-    },
-  },
-];
+      "react-hooks/rules-of-hooks": "error"
+    }
+  }
+]
