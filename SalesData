@@ -1,0 +1,29 @@
+{
+  "name": "SalesData",
+  "type": "object",
+  "properties": {
+    "product_name": {
+      "type": "string",
+      "description": "Name of the product"
+    },
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Sale date"
+    },
+    "price": {
+      "type": "number",
+      "description": "Price at time of sale in INR"
+    },
+    "units_sold": {
+      "type": "number",
+      "description": "Number of units sold"
+    }
+  },
+  "required": [
+    "product_name",
+    "date",
+    "price",
+    "units_sold"
+  ]
+}

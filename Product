@@ -1,0 +1,33 @@
+{
+  "name": "Product",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Product name"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "electronics",
+        "footwear",
+        "clothing",
+        "accessories",
+        "home_appliances"
+      ],
+      "description": "Product category"
+    },
+    "base_price": {
+      "type": "number",
+      "description": "Base price in INR"
+    },
+    "current_price": {
+      "type": "number",
+      "description": "Current selling price in INR"
+    }
+  },
+  "required": [
+    "name",
+    "base_price"
+  ]
+}
