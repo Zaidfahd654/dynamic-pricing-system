@@ -1,45 +1,97 @@
-const db = globalThis.__B44_DB__ || {
-  auth: { isAuthenticated: async () => false, me: async () => null },
-  entities: new Proxy({}, { get: () => ({ filter: async () => [], get: async () => null, create: async () => ({}), update: async () => ({}), delete: async () => ({}) }) }),
-  integrations: { Core: { UploadFile: async () => ({ file_url: '' }) } }
-};
+Dynamic Pricing System Using Demand Forecasting
 
-**Welcome to your Base44 project** 
+This project implements a Dynamic Pricing System that analyzes historical sales data to predict product demand and recommend optimized prices to maximize revenue.
 
-**About**
+The system demonstrates how businesses can use data analytics and forecasting techniques to adjust product prices dynamically based on demand trends.
 
-View and Edit  your app on [db.com](http://db.com) 
+Features
 
-This project contains everything you need to run your app locally.
+Upload historical sales data using CSV files
 
-**Edit the code in your local development environment**
+Visualize product price history and demand trends
 
-Any change pushed to the repo will also be reflected in the Base44 Builder.
+Predict future demand using forecasting techniques
 
-**Prerequisites:** 
+Automatically recommend optimal product pricing
 
-1. Clone the repository using the project's Git URL 
-2. Navigate to the project directory
-3. Install dependencies: `npm install`
-4. Create an `.env.local` file and set the right environment variables
+Display revenue impact of price adjustments
 
-```
-VITE_BASE44_APP_ID=your_app_id
-VITE_BASE44_APP_BASE_URL=your_backend_url
+Interactive dashboard for data analysis
 
-e.g.
-VITE_BASE44_APP_ID=cbef744a8545c389ef439ea6
-VITE_BASE44_APP_BASE_URL=https://my-to-do-list-81bfaad7.db.app
-```
+System Workflow
+Sales Data Upload
+        ↓
+Data Analysis & Visualization
+        ↓
+Demand Forecasting
+        ↓
+Dynamic Price Recommendation
+        ↓
+Revenue Impact Analysis
+Technologies Used
 
-Run the app: `npm run dev`
+Frontend:
 
-**Publish your changes**
+React
 
-Open [db.com](http://db.com) and click on Publish.
+Vite
 
-**Docs & Support**
+Tailwind CSS
 
-Documentation: [https://docs.db.com/Integrations/Using-GitHub](https://docs.db.com/Integrations/Using-GitHub)
+Data Visualization:
 
-Support: [https://app.db.com/support](https://app.db.com/support)
+Recharts
+
+Data Processing:
+
+JavaScript
+
+CSV Data Handling
+
+Deployment:
+
+GitHub
+
+Netlify
+
+Project Structure
+dynamic-pricing-demand-forecasting
+│
+├ components
+├ pages
+├ index.html
+├ package.json
+├ vite.config.js
+├ tailwind.config.js
+How to Run the Project Locally
+
+Install dependencies:
+
+npm install
+
+Start development server:
+
+npm run dev
+
+Build for production:
+
+npm run build
+Live Deployment
+
+The project can be deployed using platforms such as:
+
+Netlify
+
+Vercel
+
+GitHub Pages
+
+Authors
+
+Khan Zaid Nizamuddin
+Daksh Patil
+
+Amity University Maharashtra
+Bachelor of Science in Information Technology
+
+This project demonstrates the practical application of demand forecasting and dynamic pricing strategies in e-commerce environments.
