@@ -1,5 +1,5 @@
-import React from "react";
-import { Database, TrendingUp, DollarSign, CheckCircle } from "lucide-react";
+import React from "react"
+import { Database, TrendingUp, DollarSign, CheckCircle } from "lucide-react"
 
 const steps = [
   {
@@ -26,7 +26,7 @@ const steps = [
     desc: "Optimized price recommendation to maximize revenue",
     color: "bg-chart-5/10 text-chart-5 border-chart-5/20",
   },
-];
+]
 
 export default function ArchitectureDiagram() {
   return (
@@ -43,8 +43,12 @@ export default function ArchitectureDiagram() {
                   Step {i + 1}
                 </span>
               </div>
-              <h3 className="font-bold text-foreground text-sm mb-1">{step.title}</h3>
-              <p className="text-xs text-muted-foreground leading-relaxed">{step.desc}</p>
+              <h3 className="font-bold text-foreground text-sm mb-1">
+                {step.title}
+              </h3>
+              <p className="text-xs text-muted-foreground leading-relaxed">
+                {step.desc}
+              </p>
             </div>
             {i < steps.length - 1 && (
               <div className="hidden md:flex absolute top-1/2 -right-3 transform -translate-y-1/2 z-10">
@@ -57,5 +61,5 @@ export default function ArchitectureDiagram() {
         ))}
       </div>
     </div>
-  );
+  )
 }
