@@ -3,8 +3,7 @@
   "type": "object",
   "properties": {
     "name": {
-      "type": "string",
-      "description": "Product name"
+      "type": "string"
     },
     "category": {
       "type": "string",
@@ -14,16 +13,13 @@
         "clothing",
         "accessories",
         "home_appliances"
-      ],
-      "description": "Product category"
+      ]
     },
     "base_price": {
-      "type": "number",
-      "description": "Base price in INR"
+      "type": "number"
     },
     "current_price": {
-      "type": "number",
-      "description": "Current selling price in INR"
+      "type": "number"
     }
   },
   "required": [
